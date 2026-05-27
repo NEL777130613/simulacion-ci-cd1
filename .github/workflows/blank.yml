@@ -1,0 +1,25 @@
+name: Pipeline CI
+
+on:
+  push:
+
+jobs:
+  validacion:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Descargar repositorio
+      uses: actions/checkout@v4
+
+    - name: Iniciar pipeline
+      run: echo "Pipeline iniciado"
+
+    - name: Ejecutar validacion
+      run: |
+        echo "Ejecutando pruebas..."
+        echo "Prueba completada"
+
+    - name: Finalizar
+      run: echo "Pipeline exitoso"
